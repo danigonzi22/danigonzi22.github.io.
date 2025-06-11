@@ -2,83 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>⚽ Vintageretrokits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vintage Retro Kits</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Vintageretrokits</h1>
+    <h1>VINTAGE RETRO KITS</h1>
     <nav>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#carrito">Carrito</a>
-      <a href="#contacto">Contacto</a>
+      <button class="filter-btn" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="barcelona">Barcelona</button>
+      <button class="filter-btn" data-filter="real-madrid">Real Madrid</button>
+      <button class="filter-btn" data-filter="1990s">Años 90</button>
+      <button class="filter-btn" data-filter="2020s">Años 2020</button>
+      <button class="filter-btn" data-filter="visitante">Visitante</button>
+      <button class="filter-btn" data-filter="local">Local</button>
     </nav>
   </header>
 
-  <!-- ======= Catálogo ======= -->
-  <section id="catalogo" class="container">
-    <h2>Catálogo</h2>
-
-    <!-- Producto -->
-    <div class="card">
-      <img src="img/barcelona_24_home.jpg" alt="Barcelona 24‑25 Local" />
-      <h3>FC Barcelona 24‑25 Local</h3>
-      <p class="price">€79.90</p>
-      <button data-name="Barcelona 24‑25 Local" data-price="79.9">
-        Añadir al carrito
-      </button>
+  <main class="container" id="catalogo">
+    <div class="product-card barcelona 2020s local">
+      <img src="img/barcelona_24_home.jpg" alt="Barcelona 24‑25 Local">
+      <h2>Barcelona 24‑25 Local</h2>
+      <p>€79.90</p>
     </div>
 
-    <div class="card">
-      <img src="img/real_madrid_24_away.jpg" alt="Real Madrid 24‑25 Visitante" />
-      <h3>Real Madrid 24‑25 Visitante</h3>
-      <p class="price">€84.90</p>
-      <button data-name="Real Madrid 24‑25 Visitante" data-price="84.9">
-        Añadir al carrito
-      </button>
+    <div class="product-card real-madrid 2020s visitante">
+      <img src="img/real_madrid_24_away.jpg" alt="Real Madrid 24‑25 Visitante">
+      <h2>Real Madrid 24‑25 Visitante</h2>
+      <p>€84.90</p>
     </div>
 
-  </section>
-
-  <!-- ======= Carrito ======= -->
-  <section id="carrito" class="container">
-    <h2>Carrito</h2>
-    <table>
-      <thead>
-        <tr><th>Producto</th><th>Cant.</th><th>€ Unidad</th><th>Subtotal</th><th></th></tr>
-      </thead>
-      <tbody id="cart-body">
-      </tbody>
-      <tfoot>
-        <tr><td colspan="3">Total</td><td id="total">€0.00</td><td></td></tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <!-- ======= Contacto ======= -->
-  <section id="contacto" class="container">
-    <h2>Contacto y pedidos</h2>
-    <form action="https://formspree.io/f/tu-codigo" method="POST">
-      <label>Nombre
-        <input type="text" name="nombre" required />
-      </label>
-      <label>Email
-        <input type="email" name="email" required />
-      </label>
-      <label>Mensaje / Pedido
-        <textarea name="mensaje" rows="4" required></textarea>
-      </label>
-      <button type="submit">Enviar</button>
-    </form>
-    <p class="small">
-      * Al hacer clic en “Enviar” recibirás un correo con tu pedido.
-      Nosotros responderemos con los pasos de pago y envío.
-    </p>
-  </section>
+    <div class="product-card barcelona 1990s visitante">
+      <img src="img/barcelona_1996_away.jpg" alt="Barcelona 1996 Visitante">
+      <h2>Barcelona 1996 Visitante</h2>
+      <p>€69.90</p>
+    </div>
+  </main>
 
   <footer>
-    <p>© 2025 Vintageretrokits · Hecho con ❤️ y GitHub Pages</p>
+    <p>© 2025 Vintage Retro Kits · Hecho con ❤️ y GitHub Pages</p>
   </footer>
 
   <script src="app.js"></script>
